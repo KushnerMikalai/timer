@@ -1,0 +1,11 @@
+{
+  "name": "timer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:KushnerMikalai/timer.git",
+  "author": "KushnerMikalai <nickolaikushner@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "http-server": "^0.12.1"
+  }
+}
