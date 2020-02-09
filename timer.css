@@ -1,0 +1,101 @@
+/* button */
+.el-button {
+  border: initial;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #d8dee8, #788daf);
+  box-shadow: 8px 8px 16px #788daf, -8px -8px 16px #e5e7e9;
+  display: inline-block;
+  padding: 5px 15px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.el-button + .el-button {
+  margin-left: 1rem;
+}
+
+.el-button:active {
+  box-shadow: inset 8px 8px 16px #788daf, inset -8px -8px 16px #d8dee8;
+}
+
+.el-button:hover {
+  background: linear-gradient(145deg, #788daf, #d8dee8);
+}
+
+.el-button__icon {
+  font-style: initial;
+  font-size: var(--fz-extra-large);
+}
+
+.disabled {
+  opacity: 0.6;
+  background: linear-gradient(145deg, #788daf, #d8dee8);
+  cursor: no-drop;
+}
+
+.disabled:active {
+  background: linear-gradient(145deg, #788daf, #d8dee8);
+  box-shadow: 8px 8px 16px #788daf, -8px -8px 16px #e5e7e9;
+}
+
+/* timer */
+.timer {
+  position: relative;
+}
+
+.timer__buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.timer__display {
+  position: relative;
+  font-size: 4rem;
+  line-height: 1;
+  font-weight: 600;
+  text-align: center;
+}
+
+.timer__inputs-dec {
+  font-size: 2rem;
+}
+
+/* input */
+.el-input {
+  display: block;
+  margin: 0 10px;
+}
+
+.el-input__inner {
+  background: linear-gradient(145deg, #d8dee8, #788daf);
+  box-shadow: 8px 8px 16px #788daf, -8px -8px 16px #e5e7e9;
+  border: initial;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  text-align: center;
+  border-radius: 15px;
+  width: 5rem;
+  outline: none;
+  /* background-color: var(--placeholder-text); */
+}
+
+.el-input__inner-big {
+  padding: 5px 15px;
+  font-size: 2.2rem;
+  width: 100%;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.el-input__inner:focus {
+  box-shadow: inset 8px 8px 16px #788daf, inset -8px -8px 16px #d8dee8;
+}
+
+.el-input__label {
+  font-size: var(--fz-small);
+  text-align: center;
+}
