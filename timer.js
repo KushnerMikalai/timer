@@ -125,8 +125,8 @@ const getValues = (...args) => {
 };
 
 const startInterval = () => {
+  time--;
   interval = setInterval(() => {
-    time--;
     if (!!time) {
       const nowTimer = toDisplay(time);
       timerDisplay.innerHTML = nowTimer;
