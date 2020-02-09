@@ -20,20 +20,23 @@
         <div class="timer">
           <div class="timer__display js-timer-display mb-1">00:00:00</div>
           <div class="text-center mb-4">
-            <button class="el-button warning js-stop disabled">🤚&nbsp;pause</button>
+            <button class="el-button warning js-stop disabled">
+              🤚&nbsp;pause
+            </button>
           </div>
           <div class="timer__inputs mb-2">
             <div class="d-flex align-items-center justify-content-center mb-05">
-              <div class="el-input">
-                <input class="el-input__inner js-hours" type="text" maxlength="2" placeholder="h" />
+              <div class="el-select">
+                <select class="el-select__inner js-select-hours"></select>
+                <span class="el-select__label">h</span>
               </div>
-              <span class="timer__inputs-dec">:</span>
-              <div class="el-input">
-                <input class="el-input__inner js-minuts" type="text" maxlength="2" placeholder="m" />
+              <div class="el-select">
+                <select class="el-select__inner js-select-minuts"></select>
+                <span class="el-select__label">m</span>
               </div>
-              <span class="timer__inputs-dec">:</span>
-              <div class="el-input">
-                <input class="el-input__inner js-seconds" type="text" maxlength="2" placeholder="s" />
+              <div class="el-select">
+                <select class="el-select__inner js-select-seconds"></select>
+                <span class="el-select__label">s</span>
               </div>
             </div>
           </div>

@@ -37,9 +37,9 @@ const buttonStart = document.querySelector('.js-start');
 const buttonStop = document.querySelector('.js-stop');
 const buttonReset = document.querySelector('.js-reset');
 
-const inputHours = document.querySelector('.js-hours');
-const inputMinuts = document.querySelector('.js-minuts');
-const inputSeconds = document.querySelector('.js-seconds');
+const inputHours = document.querySelector('.js-select-hours');
+const inputMinuts = document.querySelector('.js-select-minuts');
+const inputSeconds = document.querySelector('.js-select-seconds');
 
 const timerDisplay = document.querySelector('.js-timer-display');
 
@@ -61,7 +61,16 @@ let started = false;
 let time = null;
 
 const setInputFilter = (textbox, inputFilter) => {
-  ['input', 'keydown', 'keyup', 'mousedown', 'mouseup', 'select', 'contextmenu', 'drop'].forEach(event => {
+  [
+    'input',
+    'keydown',
+    'keyup',
+    'mousedown',
+    'mouseup',
+    'select',
+    'contextmenu',
+    'drop'
+  ].forEach(event => {
     textbox.addEventListener(event, function() {
       if (inputFilter(this.value)) {
         this.oldValue = this.value;
@@ -77,7 +86,22 @@ const setInputFilter = (textbox, inputFilter) => {
   });
 };
 
-setInputFilter(inputHours, value => /^\d*$/.test(value) && (value === '' || parseInt(value) <= 98));
+const setOptions = (to, select) => {
+  for (let i = 0; i < to; i++) {
+    const opt = document.createElement('option');
+    opt.text = i < 10 ? '0' + i : i;
+    select.options.add(opt, 0);
+  }
+};
+
+setOptions(24, inputHours);
+setOptions(60, inputMinuts);
+setOptions(60, inputSeconds);
+
+setInputFilter(
+  inputHours,
+  value => /^\d*$/.test(value) && (value === '' || parseInt(value) <= 98)
+);
 setInputFilter(inputMinuts, value => /^\d*$/.test(value));
 setInputFilter(inputSeconds, value => /^\d*$/.test(value));
 
@@ -182,9 +206,9 @@ const start = () => {
 };
 
 buttonReset.addEventListener('click', () => {
-  inputHours.value = '';
-  inputMinuts.value = '';
-  inputSeconds.value = '';
+  inputHours.value = '00';
+  inputMinuts.value = '00';
+  inputSeconds.value = '00';
   reset();
 });
 

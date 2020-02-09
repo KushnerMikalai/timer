@@ -3,7 +3,7 @@
   border: initial;
   border-radius: 15px;
   background: linear-gradient(145deg, #d8dee8, #788daf);
-  box-shadow: 8px 8px 16px #788daf, -8px -8px 16px #e5e7e9;
+  box-shadow: 4px 4px 16px #788daf, -4px -4px 16px #e5e7e9;
   display: inline-block;
   padding: 5px 15px;
   font-size: 1rem;
@@ -11,6 +11,9 @@
   cursor: pointer;
   transition: all 0.2s ease;
   outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .el-button + .el-button {
@@ -98,4 +101,38 @@
 .el-input__label {
   font-size: var(--fz-small);
   text-align: center;
+}
+
+.el-select {
+  position: relative;
+}
+
+.el-select__label {
+  display: inline-block;
+  vertical-align: bottom;
+  font-size: 1rem;
+}
+
+.el-select__inner {
+  display: inline-block;
+  background: linear-gradient(145deg, #d8dee8, #788daf);
+  box-shadow: inset 6px 6px 16px #788daf, inset -6px -6px 16px #d8dee8;
+  border: initial;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  text-align: center;
+  border-radius: 15px;
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.el-select__inner:hover {
+  box-shadow: inset 8px 8px 16px #788daf, inset -8px -8px 16px #d8dee8;
+}
+
+.el-select + .el-select {
+  margin-left: 10px;
 }
