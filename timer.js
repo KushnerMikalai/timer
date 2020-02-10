@@ -206,7 +206,12 @@ const start = () => {
   }
 
   buttonStop.classList.remove('disabled');
-  startInterval();
+
+  if (paused) {
+    resume();
+  } else {
+    startInterval();
+  }
 };
 
 buttonReset.addEventListener('click', () => {
