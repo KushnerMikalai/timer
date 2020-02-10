@@ -64,6 +64,8 @@ const init = () => {
   setOptions(60, inputMinuts);
   setOptions(60, inputSeconds);
 
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
   // setInputFilter(
   //   inputHours,
   //   value => /^\d*$/.test(value) && (value === '' || parseInt(value) <= 98)
@@ -224,3 +226,8 @@ buttonStop.addEventListener('click', e => {
 });
 
 window.addEventListener('load', init);
+
+window.addEventListener('resize', () => {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+});

@@ -17,11 +17,6 @@
   --fz-extra-large: 1.2rem;
 }
 
-html,
-body {
-  min-height: 100vh;
-}
-
 *,
 *::before,
 *::after {
@@ -75,10 +70,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
   max-width: 40rem;
   margin: 0 auto;
   padding: 1rem;
+  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
+  min-height: 27rem;
 }
 
 .error {
