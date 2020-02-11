@@ -105,11 +105,13 @@
 
 .el-select {
   position: relative;
+  padding: 0 15px;
 }
 
 .el-select__label {
-  display: inline-block;
-  vertical-align: bottom;
+  position: absolute;
+  right: 0;
+  bottom: 0;
   font-size: 1rem;
 }
 
@@ -131,8 +133,4 @@
 
 .el-select__inner:hover {
   box-shadow: inset 8px 8px 16px #788daf, inset -8px -8px 16px #d8dee8;
-}
-
-.el-select + .el-select {
-  margin-left: 10px;
 }
