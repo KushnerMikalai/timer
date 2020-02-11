@@ -24,8 +24,10 @@
   box-shadow: inset 8px 8px 16px #788daf, inset -8px -8px 16px #d8dee8;
 }
 
-.el-button:hover {
-  background: linear-gradient(145deg, #788daf, #d8dee8);
+@media not all and (pointer: coarse) {
+  .el-button:hover {
+    background: linear-gradient(145deg, #788daf, #d8dee8);
+  }
 }
 
 .el-button__icon {
@@ -82,7 +84,6 @@
   border-radius: 15px;
   width: 5rem;
   outline: none;
-  /* background-color: var(--placeholder-text); */
 }
 
 .el-input__inner-big {
@@ -94,8 +95,10 @@
   appearance: none;
 }
 
-.el-input__inner:focus {
-  box-shadow: inset 8px 8px 16px #788daf, inset -8px -8px 16px #d8dee8;
+@media not all and (pointer: coarse) {
+  .el-input__inner:focus {
+    box-shadow: inset 8px 8px 16px #788daf, inset -8px -8px 16px #d8dee8;
+  }
 }
 
 .el-input__label {
@@ -131,6 +134,8 @@
   cursor: pointer;
 }
 
-.el-select__inner:hover {
-  box-shadow: inset 8px 8px 16px #788daf, inset -8px -8px 16px #d8dee8;
+@media not all and (pointer: coarse) {
+  .el-select__inner:hover {
+    box-shadow: inset 8px 8px 16px #788daf, inset -8px -8px 16px #d8dee8;
+  }
 }
