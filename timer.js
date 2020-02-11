@@ -33,6 +33,7 @@ const setOptions = (to, select) => {
   for (let i = 0; i < to; i++) {
     const opt = document.createElement('option');
     opt.text = i < 10 ? '0' + i : i;
+    if (i === 0) opt.selected = true;
     select.options.add(opt, 0);
   }
 };
@@ -42,14 +43,7 @@ const init = () => {
   setOptions(60, inputMinuts);
   setOptions(60, inputSeconds);
 
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
-  // setInputFilter(
-  //   inputHours,
-  //   value => /^\d*$/.test(value) && (value === '' || parseInt(value) <= 98)
-  // );
-  // setInputFilter(inputMinuts, value => /^\d*$/.test(value));
-  // setInputFilter(inputSeconds, value => /^\d*$/.test(value));
+  documentSetHeight();
 };
 
 const beep = soundEl => {
@@ -188,6 +182,11 @@ const start = () => {
   }
 };
 
+const documentSetHeight = () => {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+};
+
 buttonReset.addEventListener('click', () => {
   inputHours.value = '00';
   inputMinuts.value = '00';
@@ -206,7 +205,4 @@ buttonStop.addEventListener('click', e => {
 
 window.addEventListener('load', init);
 
-window.addEventListener('resize', () => {
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
-});
+window.addEventListener('resize', documentSetHeight);
