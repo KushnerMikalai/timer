@@ -1,3 +1,6 @@
+const changeTheme = document.querySelector('.js-change-theme');
+const cssVariableTheme = document.querySelector('#color-variable');
+
 const soundBeep = document.querySelector('.beep');
 
 const buttonStart = document.querySelector('.js-start');
@@ -13,6 +16,9 @@ const timerDisplay = document.querySelector('.js-timer-display');
 let h = 0;
 let m = 0;
 let s = 0;
+
+const themeDayString = './colorVariableDay.css';
+const themeNightString = './colorVariableNight.css';
 
 let pauseString = '🤚&nbsp;pause';
 let resumeString = '👉&nbsp;resume';
@@ -207,3 +213,7 @@ buttonStop.addEventListener('click', e => {
 window.addEventListener('load', init);
 
 window.addEventListener('resize', documentSetHeight);
+
+changeTheme.addEventListener('change', e => {
+  cssVariableTheme.href = e.target.checked ? themeDayString : themeNightString;
+});

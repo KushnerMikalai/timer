@@ -9,43 +9,50 @@
       rel="icon"
       href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/237/stopwatch_23f1.png"
     />
+    <link id="color-variable" rel="stylesheet" href="./colorVariableDay.css" />
     <link rel="stylesheet" href="./base.css" />
     <link rel="stylesheet" href="./timer.css" />
   </head>
   <body>
-    <!-- <div id="root"></div> -->
-    <audio class="beep">
-      <source src="./beep.mp3" type="audio/mpeg" />
-    </audio>
-    <div class="container">
-      <div class="content">
-        <h1 class="title">TIMER</h1>
-        <div class="timer">
-          <div class="timer__display js-timer-display mb-1">00:00:00</div>
-          <div class="text-center mb-4">
-            <button class="el-button warning js-stop disabled">
-              🤚&nbsp;pause
-            </button>
-          </div>
-          <div class="timer__inputs mb-2">
-            <div class="d-flex align-items-center justify-content-center mb-05">
-              <div class="el-select">
-                <select class="el-select__inner js-select-hours"></select>
-                <span class="el-select__label">h</span>
+    <div class="root">
+      <div class="change-theme">
+        <input class="change-theme__input js-change-theme" type="checkbox" checked />
+      </div>
+      <div class="main">
+        <audio class="beep">
+          <source src="./beep.mp3" type="audio/mpeg" />
+        </audio>
+        <div class="container">
+          <div class="content">
+            <h1 class="title">TIMER</h1>
+            <div class="timer">
+              <div class="timer__display js-timer-display mb-1">00:00:00</div>
+              <div class="text-center mb-4">
+                <button class="el-button warning js-stop disabled">
+                  🤚&nbsp;pause
+                </button>
               </div>
-              <div class="el-select">
-                <select class="el-select__inner js-select-minuts"></select>
-                <span class="el-select__label">m</span>
+              <div class="timer__inputs mb-2">
+                <div class="d-flex align-items-center justify-content-center mb-05">
+                  <div class="el-select">
+                    <select class="el-select__inner js-select-hours"></select>
+                    <span class="el-select__label">h</span>
+                  </div>
+                  <div class="el-select">
+                    <select class="el-select__inner js-select-minuts"></select>
+                    <span class="el-select__label">m</span>
+                  </div>
+                  <div class="el-select">
+                    <select class="el-select__inner js-select-seconds"></select>
+                    <span class="el-select__label">s</span>
+                  </div>
+                </div>
               </div>
-              <div class="el-select">
-                <select class="el-select__inner js-select-seconds"></select>
-                <span class="el-select__label">s</span>
+              <div class="timer__buttons">
+                <button class="el-button success js-start">👍&nbsp;start</button>
+                <button class="el-button success js-reset">👊&nbsp;reset</button>
               </div>
             </div>
-          </div>
-          <div class="timer__buttons">
-            <button class="el-button success js-start">👍&nbsp;start</button>
-            <button class="el-button success js-reset">👊&nbsp;reset</button>
           </div>
         </div>
       </div>
