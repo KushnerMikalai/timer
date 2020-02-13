@@ -161,7 +161,7 @@ const start = () => {
   clearInterval(beepInterval);
 
   timerDisplay.classList.remove('opacity');
-  buttonStop.classList.remove('disabled');
+
   beepInterval = null;
   interval = null;
   timerDisplay.innerHTML = '00:00:00';
@@ -171,6 +171,7 @@ const start = () => {
   s = Math.floor(inputSeconds.value);
 
   if (!h && !m && !s) return;
+  buttonStop.classList.remove('disabled');
 
   const now = Math.floor(Date.now());
   time = now + miliseconds(h, m, s);
