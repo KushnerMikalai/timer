@@ -6,6 +6,6 @@
   "author": "KushnerMikalai <nickolaikushner@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "http-server": "^0.12.1"
+    "http-server": "^14.1.0"
   }
 }

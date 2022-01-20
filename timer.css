@@ -165,7 +165,7 @@
   background: linear-gradient(145deg, var(--base1), var(--base2));
   box-shadow: inset 6px 6px 16px var(--base2), inset -6px -6px 16px var(--base1);
   border: initial;
-  padding: 10px 15px;
+  padding: 0;
   font-size: 1.2rem;
   text-align: center;
   border-radius: 15px;
@@ -175,6 +175,33 @@
   -webkit-appearance: none;
   appearance: none;
   cursor: pointer;
+}
+
+.el-select option {
+  padding: 2px 15px;
+}
+
+.el-select option:hover,
+.el-select option:focus,
+.el-select option:active,
+.el-select option:checked {
+    background: linear-gradient(#ffd33c,#ffd33c);
+    background-color: #ffd33c !important;
+}
+
+
+.el-select__inner::-webkit-scrollbar {
+  width: 5px;               /* width of the entire scrollbar */
+}
+
+.el-select__inner::-webkit-scrollbar-track {
+  background: transparent;        /* color of the tracking area */
+}
+
+.el-select__inner::-webkit-scrollbar-thumb {
+  background-color: #000;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid ;  /* creates padding around scroll thumb */
 }
 
 @media not all and (pointer: coarse) {
